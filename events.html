@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Events — Morris Lam Photography</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1a1a1a;background:#fff;line-height:1.6}
+a{color:inherit;text-decoration:none}
+header{text-align:center;padding:48px 20px 8px}
+header .site-title{font-size:15px;letter-spacing:.45em;text-transform:uppercase;font-weight:600}
+nav{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;padding:20px 12px 28px;border-bottom:1px solid #eee}
+nav a{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#555}
+nav a:hover,nav a.active{color:#000}
+main{max-width:1180px;margin:0 auto;padding:40px 20px 70px}
+h1{font-size:26px;letter-spacing:.3em;text-transform:uppercase;font-weight:500;text-align:center;margin-bottom:14px}
+.sub{text-align:center;color:#666;max-width:640px;margin:0 auto 36px;font-size:15px}
+.grid{column-count:3;column-gap:14px}
+.grid figure{break-inside:avoid;margin-bottom:14px;cursor:zoom-in}
+.grid img{width:100%;height:auto;display:block}
+@media(max-width:900px){.grid{column-count:2}}
+@media(max-width:540px){.grid{column-count:1}}
+.covers{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:640px){.covers{grid-template-columns:1fr}}
+.cover{position:relative;display:block}
+.cover img{width:100%;height:auto;display:block}
+.cover span{position:absolute;left:0;right:0;bottom:0;padding:42px 18px 14px;color:#fff;font-size:13px;letter-spacing:.3em;text-transform:uppercase;background:linear-gradient(transparent,rgba(0,0,0,.55))}
+section.copy{max-width:680px;margin:44px auto 0}
+section.copy h2{font-size:14px;letter-spacing:.28em;text-transform:uppercase;font-weight:600;margin:30px 0 8px}
+section.copy p{color:#444;font-size:15px;margin-bottom:10px}
+.inquiries{text-align:center;margin-top:56px;padding-top:36px;border-top:1px solid #eee}
+.inquiries h2{font-size:14px;letter-spacing:.28em;text-transform:uppercase;margin-bottom:8px}
+.inquiries p{color:#666;margin-bottom:16px}
+.btn{display:inline-block;border:1px solid #1a1a1a;padding:11px 30px;font-size:12px;letter-spacing:.25em;text-transform:uppercase}
+.btn:hover{background:#1a1a1a;color:#fff}
+.about-wrap{display:grid;grid-template-columns:minmax(260px,420px) 1fr;gap:44px;align-items:start;max-width:980px;margin:0 auto}
+@media(max-width:760px){.about-wrap{grid-template-columns:1fr}}
+.about-wrap img{width:100%;height:auto;display:block}
+footer{text-align:center;padding:30px 16px 40px;border-top:1px solid #eee;color:#777;font-size:13px;letter-spacing:.08em}
+footer a{text-decoration:underline}
+#lightbox{position:fixed;inset:0;background:rgba(0,0,0,.93);display:none;align-items:center;justify-content:center;z-index:50;cursor:zoom-out}
+#lightbox.open{display:flex}
+#lightbox img{max-width:94vw;max-height:94vh;width:auto;height:auto}
+</style></head>
+<body>
+<header><a class="site-title" href="index.html">Morris Lam Photography</a></header>
+<nav><a href="portraits.html" class="">Lifestyle Portraits</a><a href="graduation.html" class="">Graduation</a><a href="headshots.html" class="">Headshots</a><a href="events.html" class="active">Events</a><a href="about.html" class="">About Me</a></nav>
+<main><h1>Event Photography</h1><p class="sub">Commemorate your special occasion with a smile!</p><div class="grid"><figure><img loading="lazy" src="images/MFL03267.jpg" alt="MFL03267.JPG"></figure><figure><img loading="lazy" src="images/ML_09845.jpg" alt="ML_09845.jpg"></figure><figure><img loading="lazy" src="images/MFL08769.jpg" alt="MFL08769.jpg"></figure><figure><img loading="lazy" src="images/MFL07896.jpg" alt="MFL07896.jpg"></figure><figure><img loading="lazy" src="images/MFL07195.jpg" alt="MFL07195.jpg"></figure><figure><img loading="lazy" src="images/MFL08710.jpg" alt="MFL08710.jpg"></figure><figure><img loading="lazy" src="images/MFL08751.jpg" alt="MFL08751.jpg"></figure><figure><img loading="lazy" src="images/ML_05490.jpg" alt="ML_05490.jpg"></figure><figure><img loading="lazy" src="images/ML_05617.jpg" alt="ML_05617.jpg"></figure></div><section class="copy">
+   <h2>Quality Captures</h2>
+   <p>Quality event photos let you relive your greatest moments, without the hassle of documenting it all on your own.</p>
+   <h2>Experience &amp; Service</h2>
+   <p>Clients from entertainment, corporate, conventions, and weddings — excellent service in all cases.</p>
+   <h2>Preparation</h2>
+   <p>Quick turnarounds, with each shot picture-perfect in camera so minimal editing is required.</p></section><div class="inquiries"><h2>Photography Inquiries?</h2><p>Excited about working together? Let's connect!</p><a class="btn" href="mailto:Photography@morrislam.com">Contact</a></div></main>
+<footer>— Morris Lam &nbsp;|&nbsp; Fremont, California &nbsp;|&nbsp; <a href="mailto:Photography@morrislam.com">Photography@morrislam.com</a> —<br>
+<a href="https://instagram.com/lammorrice" target="_blank" rel="noopener">Instagram — @lammorrice</a></footer>
+<div id="lightbox"><img alt=""></div>
+<script>
+document.querySelectorAll('.grid figure img').forEach(function(im){
+  im.addEventListener('click',function(){
+    var lb=document.getElementById('lightbox');
+    lb.querySelector('img').src=im.src; lb.classList.add('open');
+  });
+});
+document.getElementById('lightbox').addEventListener('click',function(){this.classList.remove('open');});
+</script>
+</body></html>
