@@ -5,18 +5,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
 <style>
+:root{--sans:'Raleway','Helvetica Neue',Helvetica,Arial,sans-serif;--serif:'Lora',Georgia,serif}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Lora',Georgia,serif;color:#111;background:#fff;line-height:1.7;font-size:16px}
+body{font-family:var(--serif);color:#111;background:#fff;line-height:1.7;font-size:16px}
+button{font-family:var(--sans)}
 a{color:inherit;text-decoration:none}
 .sans{font-family:'Raleway','Helvetica Neue',Helvetica,Arial,sans-serif}
 header{text-align:center;padding:54px 20px 4px;background:#fff}
-header .site-title{font-family:'Raleway','Helvetica Neue',sans-serif;font-size:42px;font-weight:200;letter-spacing:.35em;text-transform:uppercase}
+header .site-title{font-family:var(--sans);font-size:42px;font-weight:200;letter-spacing:.35em;text-transform:uppercase}
 nav{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;padding:22px 12px 30px;background:#fff}
-nav a{font-family:'Raleway','Helvetica Neue',sans-serif;font-size:13px;font-weight:300;letter-spacing:.25em;text-transform:uppercase;color:#333}
+nav a{font-family:var(--sans);font-size:13px;font-weight:300;letter-spacing:.25em;text-transform:uppercase;color:#333}
 nav a:hover{color:#000}
 nav a.active{color:#b08d57}
 main{max-width:1200px;margin:0 auto;padding:34px 18px 70px}
-h1{font-family:'Raleway','Helvetica Neue',sans-serif;font-size:28px;font-weight:200;letter-spacing:.3em;text-transform:uppercase;text-align:center;margin-bottom:16px}
+h1{font-family:var(--sans);font-size:28px;font-weight:200;letter-spacing:.3em;text-transform:uppercase;text-align:center;margin-bottom:16px}
 .sub{text-align:center;color:#444;max-width:660px;margin:0 auto 34px;font-size:16px;font-style:italic}
 .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
 @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
@@ -24,12 +26,12 @@ h1{font-family:'Raleway','Helvetica Neue',sans-serif;font-size:28px;font-weight:
 .grid img{width:100%;height:100%;object-fit:cover;display:block}
 .covers{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 @media(max-width:640px){.covers{grid-template-columns:1fr}}
-.cover{position:relative;display:block;overflow:hidden}
-.cover img{width:100%;height:auto;display:block}
-.cover span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Raleway',sans-serif;font-size:21px;font-weight:200;letter-spacing:.3em;text-transform:uppercase;text-shadow:0 1px 12px rgba(0,0,0,.45);background:rgba(0,0,0,.12)}
+.cover{position:relative;display:block;overflow:hidden;aspect-ratio:2/3}
+.cover img{width:100%;height:100%;object-fit:cover;display:block}
+.cover span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--sans);font-size:21px;font-weight:200;letter-spacing:.3em;text-transform:uppercase;text-shadow:0 1px 12px rgba(0,0,0,.45);background:rgba(0,0,0,.12)}
 .hero{position:relative;margin:6px 0 40px}
 .hero img{width:65%;margin-left:auto;height:auto;display:block}
-.hero .box{position:absolute;left:0;top:50%;transform:translateY(-50%);width:38%;background:#000;color:#fff;padding:38px 34px;font-family:'Raleway',sans-serif;font-size:22px;font-weight:200;letter-spacing:.25em;text-transform:uppercase;line-height:1.9}
+.hero .box{position:absolute;left:0;top:50%;transform:translateY(-50%);width:38%;background:#000;color:#fff;padding:38px 34px;font-family:var(--sans);font-size:22px;font-weight:200;letter-spacing:.25em;text-transform:uppercase;line-height:1.9}
 @media(max-width:700px){.hero img{width:100%}.hero .box{position:static;transform:none;width:100%}}
 .slideshow{position:relative;max-width:860px;margin:0 auto;background:#111}
 .slideshow img.slide{width:100%;height:auto;display:none}
@@ -40,18 +42,21 @@ h1{font-family:'Raleway','Helvetica Neue',sans-serif;font-size:28px;font-weight:
 .slideshow .dots button{width:9px;height:9px;border-radius:50%;border:1px solid #888;background:#fff;margin:0 4px;cursor:pointer;padding:0}
 .slideshow .dots button.on{background:#111}
 section.copy{max-width:680px;margin:44px auto 0}
-section.copy h2{font-family:'Raleway',sans-serif;font-size:14px;letter-spacing:.28em;text-transform:uppercase;font-weight:400;margin:30px 0 8px}
+section.copy h2{font-family:var(--sans);font-size:14px;letter-spacing:.28em;text-transform:uppercase;font-weight:400;margin:30px 0 8px}
 section.copy p{color:#333;font-size:16px;margin-bottom:10px}
 .inquiries{text-align:center;margin-top:56px;padding-top:36px}
-.inquiries h2{font-family:'Raleway',sans-serif;font-size:14px;letter-spacing:.28em;text-transform:uppercase;font-weight:400;margin-bottom:8px}
+.inquiries h2{font-family:var(--sans);font-size:14px;letter-spacing:.28em;text-transform:uppercase;font-weight:400;margin-bottom:8px}
 .inquiries p{color:#444;margin-bottom:18px}
-.btn{display:inline-block;background:#000;color:#fff;padding:14px 34px;font-family:'Raleway',sans-serif;font-size:12px;letter-spacing:.25em;text-transform:uppercase}
+.btn{display:inline-block;background:#000;color:#fff;padding:14px 34px;font-family:var(--sans);font-size:12px;letter-spacing:.25em;text-transform:uppercase}
 .btn:hover{background:#333}
 .about-wrap{display:grid;grid-template-columns:minmax(260px,420px) 1fr;gap:44px;align-items:start;max-width:980px;margin:0 auto}
 @media(max-width:760px){.about-wrap{grid-template-columns:1fr}}
 .about-wrap img{width:100%;height:auto;display:block}
-footer{text-align:center;padding:34px 16px 42px;color:#555;font-size:14px;letter-spacing:.05em;background:#fff}
-footer a{text-decoration:underline}
+footer{font-family:var(--sans);text-align:center;padding:34px 16px 42px;color:#666;font-size:13px;font-weight:300;letter-spacing:.14em;background:#fff}
+footer a{color:inherit}
+footer .f-icons{margin-top:14px;display:flex;gap:20px;justify-content:center}
+footer .f-icons a{color:#777;display:inline-flex}
+footer .f-icons a:hover{color:#000}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
 .reveal.in{opacity:1;transform:none}
 #lightbox{position:fixed;inset:0;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;z-index:50;cursor:zoom-out}
@@ -62,8 +67,8 @@ footer a{text-decoration:underline}
 <header><a class="site-title" href="index.html">Morris Lam Photography</a></header>
 <nav><a href="portraits.html" class="">Lifestyle Portraits</a><a href="headshots.html" class="">Headshots</a><a href="events.html" class="">Events</a><a href="about.html" class="">About Me</a></nav>
 <main><h1>Portfolio</h1><div class="grid"><figure><img loading="lazy" src="images/ML_04278.jpg" alt="ML_04278.jpg"></figure><figure><img loading="lazy" src="images/ML_07507.jpg" alt="ML_07507.jpg"></figure><figure><img loading="lazy" src="images/ML_06207.jpg" alt="ML_06207.jpg"></figure><figure><img loading="lazy" src="images/ML_06832.jpg" alt="ML_06832.jpg"></figure><figure><img loading="lazy" src="images/ML_00897.jpg" alt="ML_00897.jpg"></figure><figure><img loading="lazy" src="images/ML_07056.jpg" alt="ML_07056.jpg"></figure><figure><img loading="lazy" src="images/ML_05190.jpg" alt="ML_05190.jpg"></figure><figure><img loading="lazy" src="images/ML_09845.jpg" alt="ML_09845.jpg"></figure><figure><img loading="lazy" src="images/ML_08038_PS_SQ.jpg" alt="ML_08038_PS_SQ.jpg"></figure><figure><img loading="lazy" src="images/ML_03917.jpg" alt="ML_03917.jpg"></figure><figure><img loading="lazy" src="images/ML_04704.jpg" alt="ML_04704.jpg"></figure><figure><img loading="lazy" src="images/ML_06048.jpg" alt="ML_06048.jpg"></figure><figure><img loading="lazy" src="images/ML_04990.jpg" alt="ML_04990.jpg"></figure><figure><img loading="lazy" src="images/ML_07183.jpg" alt="ML_07183.jpg"></figure><figure><img loading="lazy" src="images/ML_05342.jpg" alt="ML_05342.jpg"></figure><figure><img loading="lazy" src="images/ML_03177-2.jpg" alt="ML_03177-2.jpg"></figure><figure><img loading="lazy" src="images/ML_07678.jpg" alt="ML_07678.jpg"></figure><figure><img loading="lazy" src="images/ML_09048.jpg" alt="ML_09048.jpg"></figure><figure><img loading="lazy" src="images/ML_07086.jpg" alt="ML_07086.jpg"></figure><figure><img loading="lazy" src="images/ML_09542.jpg" alt="ML_09542.jpg"></figure><figure><img loading="lazy" src="images/ML_08864.jpg" alt="ML_08864.jpg"></figure><figure><img loading="lazy" src="images/ML_05852.jpg" alt="ML_05852.jpg"></figure><figure><img loading="lazy" src="images/ML_05580.jpg" alt="ML_05580.jpg"></figure><figure><img loading="lazy" src="images/ML_00896.jpg" alt="ML_00896.jpg"></figure><figure><img loading="lazy" src="images/ML_01927.jpg" alt="ML_01927.jpg"></figure><figure><img loading="lazy" src="images/ML_07165.jpg" alt="ML_07165.jpg"></figure><figure><img loading="lazy" src="images/ML_04117.jpg" alt="ML_04117.jpg"></figure><figure><img loading="lazy" src="images/ML_05109.jpg" alt="ML_05109.jpg"></figure><figure><img loading="lazy" src="images/ML_05519.jpg" alt="ML_05519.jpg"></figure><figure><img loading="lazy" src="images/ML_07699.jpg" alt="ML_07699.jpg"></figure></div><div class="inquiries"><h2>Photography Inquiries?</h2><p>Excited about working together? Let's connect!</p><a class="btn" href="mailto:Photography@morrislam.com">Contact</a></div></main>
-<footer>— Morris Lam &nbsp;|&nbsp; Fremont, California &nbsp;|&nbsp; <a href="mailto:Photography@morrislam.com">Photography@morrislam.com</a> —<br>
-<a href="https://instagram.com/lammorrice" target="_blank" rel="noopener">Instagram — @lammorrice</a></footer>
+<footer>— Morris Lam &nbsp;|&nbsp; Fremont, California &nbsp;|&nbsp; <a href="mailto:Photography@morrislam.com">Photography@morrislam.com</a> —
+<div class="f-icons"><a href="https://instagram.com/lammorrice" target="_blank" rel="noopener" aria-label="Instagram — @lammorrice"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a><a href="mailto:Photography@morrislam.com" aria-label="Email"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7.5l9 6 9-6"/></svg></a></div></footer>
 <div id="lightbox"><img alt=""></div>
 <script>
 var lb=document.getElementById('lightbox');
